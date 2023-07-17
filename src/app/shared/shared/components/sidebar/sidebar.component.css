@@ -1,0 +1,9 @@
+.sidebar-title{
+  margin-top: 0;
+  color: white;
+}
+
+.sidebar-divider{
+  opacity: 0.2;
+  margin-bottom: 15px;
+}
