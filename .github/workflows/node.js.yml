@@ -28,7 +28,7 @@ jobs:
       run: npm ci
 
     - name: Build
-      run: npm run build --configuration=gh-build && cp dist/gifs-app/index.html
+      run: npm run build --configuration=gh-build cp dist/gifs-app/index.html root
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.1
