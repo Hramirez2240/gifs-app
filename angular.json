@@ -45,7 +45,7 @@
               ],
               "outputHashing": "all"
             },
-            "gh-build": {
+            "github": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
