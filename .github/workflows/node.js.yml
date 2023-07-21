@@ -6,8 +6,6 @@ name: Build simple angular project
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
@@ -25,9 +23,15 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    
+
     - name: Install dependencies
       run: npm ci
-        
+
     - name: Build
-      run: npm run build
+      run: npm run build gh-build && cp dist/gifs-app/index.html
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.1
+      with:
+        branch: gh-pages
+        folder: GIFS-APP/dist/gifs-app
